@@ -14,7 +14,7 @@ private VictorSP leftMain = new VictorSP(RobotMap.LEFT_MAIN_MOTOR);
 private VictorSP leftFollower = new VictorSP(RobotMap.LEFT_FOLLOWER_MOTOR);
 private VictorSP rightMain = new VictorSP(RobotMap.RIGHT_MAIN_MOTOR);
 private VictorSP rightFollower = new VictorSP(RobotMap.RIGHT_FOLLOWER_MOTOR);
- 
+ // hi
 private Encoder leftEnc = new Encoder(0, 1, true);
 public Drivetrain (){
   

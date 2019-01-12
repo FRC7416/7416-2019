@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 public class OI {
      
-  //hello
+  
   //Controllers
   public Joystick driverPad = new Joystick(0);
   public Joystick opPad = new Joystick(1);
