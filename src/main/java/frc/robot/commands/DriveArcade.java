@@ -15,7 +15,7 @@ public class DriveArcade extends Command {
 
   @Override
   protected void execute() {
-    Robot.drivetrain.driveArcade(Robot.oi.getDriverTriggerSum(), Robot.oi.getDriverLeftStickX());
+    Robot.drivetrain.driveArcade(Robot.oi.getDriverLeftStickY(), Robot.oi.getDriverLeftStickX());
   }
 
   @Override
