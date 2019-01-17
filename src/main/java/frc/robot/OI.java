@@ -68,7 +68,7 @@ public double getFstickX() {
 // thinking either arc turning or manual lift control. 
 
 public double getFstickZ() {
-    return fstickDeadband(this.fStick.getRawAxis(FStickMap.ZAXIS), FSTICK_DEADBAND, 0.0);
+    return fStickDeadband(this.fStick.getRawAxis(FStickMap.ZAXIS), FSTICK_DEADBAND, 0.0);
 }
 
 

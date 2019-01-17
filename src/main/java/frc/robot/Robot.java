@@ -37,6 +37,7 @@ public class Robot extends IterativeRobot {
   @Override
   public void autonomousInit() {
     //code to run auto
+    //We likely will not be using this section. I belive this is for automated phase, not for automated commands triggered by buttons.
   }
 
   @Override
