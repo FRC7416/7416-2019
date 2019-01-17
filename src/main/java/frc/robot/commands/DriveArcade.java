@@ -21,7 +21,7 @@ public class DriveArcade extends Command {
     Robot.drivetrain.driveArcade(Robot.oi.getDriverLeftStickY(), Robot.oi.getDriverLeftStickX());
 
     //Drive command for Fstick
-    Robot.drivetrain.driveArcade(Robot.oi.getFstickY(), Robot.oi.getDriverLeftStickX());
+    Robot.drivetrain.driveArcade(Robot.oi.getFstickX(), Robot.oi.getFstickY());
   }
 
   @Override

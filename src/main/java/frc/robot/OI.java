@@ -9,10 +9,10 @@ public class OI {
      
   
   //Controllers
-  public Joystick driverPad = new Joystick(0);
+  public Joystick driverPad = new Joystick(1);
 
   //Setting up the flightstick. As written *should* only work when driverpad is also on. Try switching Joystick(1) to Joystick (0) to function without. Be sure to change driverPad to Joystick(1)
-  public Joystick fStick = new Joystick(1);
+  public Joystick fStick = new Joystick(0);
 
 
 //deadband values for both controllers. 0.05 seems like a good option. 0.01 has issues at extremely low throttles, while anything above .1 is far too high
@@ -57,11 +57,11 @@ private static double fStickDeadband(double value, double deadband, double cente
 }
 
 public double getFstickY() {
-    return fStickDeadband(this.fStick.getRawAxis(FStickMap.XAXIS), FSTICK_DEADBAND, 0.0);
+    return fStickDeadband(this.fStick.getRawAxis(1), FSTICK_DEADBAND, 0.0);
 }
 
 public double getFstickX() {
-    return fStickDeadband(this.fStick.getRawAxis(FStickMap.YAXIS), FSTICK_DEADBAND, 0.0);
+    return fStickDeadband(this.fStick.getRawAxis(FStickMap.XAXIS), FSTICK_DEADBAND, 0.0);
 }
 
 // Unsure if we are talking about twist here. May need to change a few things around in FStickMap.java to make functional. Also unsure what we would use it for
