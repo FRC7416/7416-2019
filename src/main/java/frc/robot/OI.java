@@ -15,10 +15,10 @@ public class OI {
   public Joystick fStick = new Joystick(1);
 
 
-//deadband values for both controllers. 0.05 seems like a good option. 0.01 has issues at extremely low throttles anything above .1 is far too high
+//deadband values for both controllers. 0.05 seems like a good option. 0.01 has issues at extremely low throttles, while anything above .1 is far too high
 private static final double STICK_DEADBAND = 0.05;
 
-//testing required for optimal fstick deadbands
+//testing required for optimal fstick deadbands. my inital thought is that smaller is better but i'm unsure.
 private static final double FSTICK_DEADBAND = 0.05;
 
 //deadband math
