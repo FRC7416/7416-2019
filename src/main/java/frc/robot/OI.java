@@ -56,20 +56,27 @@ private static double fStickDeadband(double value, double deadband, double cente
     return (value < (center + deadband) && value > (center - deadband)) ? center : value;
 }
 
-public double getFstickY() {
-    return fStickDeadband(this.fStick.getRawAxis(1), FSTICK_DEADBAND, 0.0);
-}
+
 
 public double getFstickX() {
     return fStickDeadband(this.fStick.getRawAxis(FStickMap.XAXIS), FSTICK_DEADBAND, 0.0);
 }
 
-// Unsure if we are talking about twist here. May need to change a few things around in FStickMap.java to make functional. Also unsure what we would use it for
+public double getFstickY() {
+    return fStickDeadband(this.fStick.getRawAxis(FStickMap.YAXIS), FSTICK_DEADBAND, 0.0);
+}
+
 // thinking either arc turning or manual lift control. 
 
 public double getFstickZ() {
     return fStickDeadband(this.fStick.getRawAxis(FStickMap.ZAXIS), FSTICK_DEADBAND, 0.0);
 }
 
+public double getFThrottle(){
+    return this.fStick.getRawAxis(FStickMap.THROTTLE);
+}
+public double getMultiplier(double axis, double throttle){
+    return axis*throttle;
+}
 
 }
