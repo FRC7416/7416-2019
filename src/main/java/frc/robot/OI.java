@@ -20,7 +20,7 @@ private static final double STICK_DEADBAND = 0.05;
 
 //testing required for optimal fstick deadbands. my inital thought is that smaller is better but i'm unsure.
 private static final double FSTICK_DEADBAND = 0.05;
-private static final double XFSTICK_DEADBAND = 0.08;
+private static final double XFSTICK_DEADBAND = 0.1;
 
 //deadband math
 private static double stickDeadband(double value, double deadband, double center) {
@@ -79,16 +79,14 @@ public double getFThrottle(){
 public double getMultiplier(double axis, double throttle){
   //throttle = -throttle;
   // throttle is backwards
-  if (throttle >=-1 && throttle <=-0.6)
+  if (throttle >=-1 && throttle <=-0.5)
   throttle = 1;
-  else if (throttle>-0.6 && throttle <= -0.2)
-  throttle = .8;
-  else if (throttle>-0.2 && throttle <= 0.2)
-  throttle = .6;
-  else if (throttle >.2 && throttle <= 0.6)
-  throttle = .4;
-  else if (throttle >.6 && throttle <= 1)
-  throttle = .2;
+  else if (throttle>-0.5 && throttle <= 0)
+  throttle = .75;
+  else if (throttle> 0 && throttle <= 0.5)
+  throttle = .5;
+  else if (throttle > 0.5 && throttle <= 1)
+  throttle = .25;
   return axis*throttle;
 }
 
