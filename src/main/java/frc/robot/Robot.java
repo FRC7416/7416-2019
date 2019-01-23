@@ -8,6 +8,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.subsystems.Drivetrain;
 
+import edu.wpi.first.wpilibj.CameraServer;
+
 public class Robot extends IterativeRobot {
 
   public static Drivetrain drivetrain = new Drivetrain();
@@ -15,6 +17,7 @@ public class Robot extends IterativeRobot {
 
   @Override
   public void robotInit() {
+    CameraServer.getInstance().startAutomaticCapture();
     oi = new OI();  
   }
 
