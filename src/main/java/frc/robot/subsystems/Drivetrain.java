@@ -17,10 +17,10 @@ private VictorSP rightFollower = new VictorSP(RobotMap.RIGHT_FOLLOWER_MOTOR);
  
 private Encoder leftEnc = new Encoder(0, 1, true);
 public Drivetrain (){
-  // leftMain.setInverted(true);
-  // leftFollower.setInverted(true);
-  // rightMain.setInverted(false);
-  // rightFollower.setInverted(false);
+  leftMain.setInverted(false);
+  leftFollower.setInverted(false);
+  rightMain.setInverted(true);
+  rightFollower.setInverted(true);
 } 
 
 public void driveArcade(double throttle, double turn) {
