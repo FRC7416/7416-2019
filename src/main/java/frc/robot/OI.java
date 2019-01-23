@@ -78,7 +78,7 @@ public double getFThrottle(){
 }
 public double getMultiplier(double axis, double throttle){
   //throttle = -throttle;
-  // throttle is backwards
+  // throttle is backwards goes form 1 t0 -1
   if (throttle >=-1 && throttle <=-0.5)
   throttle = 1;
   else if (throttle>-0.5 && throttle <= 0)

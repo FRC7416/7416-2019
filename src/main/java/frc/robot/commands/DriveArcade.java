@@ -22,6 +22,7 @@ public class DriveArcade extends Command {
 
     //Drive command for Fstick
     Robot.drivetrain.driveArcade(Robot.oi.getMultiplier(Robot.oi.getFstickX(),Robot.oi.getFThrottle()), Robot.oi.getMultiplier(Robot.oi.getFstickY(),Robot.oi.getFThrottle()));
+    //Robot.drivetrain.driveArcade(Robot.oi.getMultiplier(Robot.oi.getFstickY(),Robot.oi.getFThrottle()), Robot.oi.getMultiplier(Robot.oi.getFstickX(),Robot.oi.getFThrottle()));
 
     
   }
