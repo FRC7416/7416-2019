@@ -19,7 +19,7 @@ public class OI {
 private static final double STICK_DEADBAND = 0.05;
 
 //testing required for optimal fstick deadbands. my inital thought is that smaller is better but i'm unsure.
-private static final double FSTICK_DEADBAND = 0.05;
+private double FSTICK_DEADBAND = 0.05;
 private static final double XFSTICK_DEADBAND = 0.1;
 
 //deadband math
@@ -29,25 +29,25 @@ private static double stickDeadband(double value, double deadband, double center
 
 
 //all the following "get" methods pull the raw data from the controller and adjust for deadband.
-public double getDriverLeftStickY() {
-    return stickDeadband(this.driverPad.getRawAxis(JoystickMap.LEFT_Y), STICK_DEADBAND, 0.0);
-}
+// public double getDriverLeftStickY() {
+//     return stickDeadband(this.driverPad.getRawAxis(JoystickMap.LEFT_Y), STICK_DEADBAND, 0.0);
+// }
 
-public double getDriverLeftStickX() {
-    return stickDeadband(this.driverPad.getRawAxis(JoystickMap.LEFT_X), STICK_DEADBAND, 0.0);
-}
+// public double getDriverLeftStickX() {
+//     return stickDeadband(this.driverPad.getRawAxis(JoystickMap.LEFT_X), STICK_DEADBAND, 0.0);
+// }
 
-public double getDriverRightStickY() {
-    return stickDeadband(this.driverPad.getRawAxis(JoystickMap.RIGHT_Y), STICK_DEADBAND, 0.0);
-}
+// public double getDriverRightStickY() {
+//     return stickDeadband(this.driverPad.getRawAxis(JoystickMap.RIGHT_Y), STICK_DEADBAND, 0.0);
+// }
 
-public double getDriverRightStickX() {
-    return stickDeadband(this.driverPad.getRawAxis(JoystickMap.RIGHT_X), STICK_DEADBAND, 0.0);
-}
+// public double getDriverRightStickX() {
+//     return stickDeadband(this.driverPad.getRawAxis(JoystickMap.RIGHT_X), STICK_DEADBAND, 0.0);
+// }
 
-public double getDriverTriggerSum() {
-    return this.driverPad.getRawAxis(JoystickMap.RIGHT_TRIGGER) - this.driverPad.getRawAxis(JoystickMap.LEFT_TRIGGER); //TODO: Check Axis (Right - Left)
-}
+// public double getDriverTriggerSum() {
+//     return this.driverPad.getRawAxis(JoystickMap.RIGHT_TRIGGER) - this.driverPad.getRawAxis(JoystickMap.LEFT_TRIGGER); //TODO: Check Axis (Right - Left)
+// }
 
 
 
@@ -60,7 +60,8 @@ private static double fStickDeadband(double value, double deadband, double cente
 
 
 public double getFstickX() {
-    return fStickDeadband(this.fStick.getRawAxis(FStickMap.XAXIS), XFSTICK_DEADBAND, 0.0);
+    return fStickDeadband(this.driverPad.getRawAxis(0), 0, 0.0);
+    //return fStickDeadband(this.fStick.getRawAxis(FStickMap.XAXIS), XFSTICK_DEADBAND, 0.0);
 }
 
 public double getFstickY() {
@@ -79,15 +80,26 @@ public double getFThrottle(){
 public double getMultiplier(double axis, double throttle){
   //throttle = -throttle;
   // throttle is backwards goes form 1 t0 -1
-  if (throttle >=-1 && throttle <=-0.5)
+  if (throttle >=-1 && throttle <=-0.5){
   throttle = 1;
-  else if (throttle>-0.5 && throttle <= 0)
+  FSTICK_DEADBAND = .05;
+  }
+  else if (throttle>-0.5 && throttle <= 0){
   throttle = .75;
-  else if (throttle> 0 && throttle <= 0.5)
+  FSTICK_DEADBAND = .05;
+  }
+  else if (throttle> 0 && throttle <= 0.5){
   throttle = .5;
-  else if (throttle > 0.5 && throttle <= 1)
+  FSTICK_DEADBAND = .05;
+  }
+  else if (throttle > 0.5 && throttle <= 1){
+
+  
   throttle = .25;
+  FSTICK_DEADBAND = 0.1;
+  }
   return axis*throttle;
+
 }
 
 
