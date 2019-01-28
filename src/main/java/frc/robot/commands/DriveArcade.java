@@ -15,13 +15,8 @@ public class DriveArcade extends Command {
 
   @Override
   protected void execute() {
-    //I belive this is where all button-press commands should go.
-
-    //Drive command for controller
-    //Robot.drivetrain.driveArcade(Robot.oi.getDriverLeftStickY(), Robot.oi.getDriverLeftStickX());
-
-    //Drive command for Fstick
-    //Robot.drivetrain.driveArcade(Robot.oi.getMultiplier(Robot.oi.getFstickX(),Robot.oi.getFThrottle()), Robot.oi.getMultiplier(Robot.oi.getFstickY(),Robot.oi.getFThrottle()));
+   
+    
     Robot.drivetrain.driveArcade(Robot.oi.getMultiplier(Robot.oi.getFstickY(),Robot.oi.getFThrottle()), Robot.oi.getMultiplier(Robot.oi.getFstickX(),Robot.oi.getFThrottle()));
 
     
