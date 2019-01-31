@@ -34,6 +34,10 @@ public double getFstickY() {
     return fStickDeadband(this.fStick.getRawAxis(FStickMap.YAXIS), FSTICK_DEADBAND, 0.0);
 }
 
+
+
+
+
 public double getFstickZ() {
     return fStickDeadband(this.fStick.getRawAxis(FStickMap.ZAXIS), FSTICK_DEADBAND, 0.0);
 }
