@@ -1,5 +1,4 @@
-// DO NOT TOUCH
-// DONT YOU DARE TOUCH I KNOW YOU WANT TO NATHAN
+
 package frc.robot;
 
 import edu.wpi.first.wpilibj.RobotBase;
@@ -9,7 +8,7 @@ import edu.wpi.first.wpilibj.RobotBase;
  * Unless you know what you are doing, do not modify this file except to
  * change the parameter class to the startRobot call.
  */
-// no touchy
+
 public final class Main {
   private Main() {
   }
@@ -24,4 +23,3 @@ public final class Main {
   }
 }
 
-//(don't touch)

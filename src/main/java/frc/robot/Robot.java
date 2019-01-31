@@ -6,13 +6,15 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.*;
+
 
 import edu.wpi.first.wpilibj.CameraServer;
 
 public class Robot extends IterativeRobot {
-
+  
   public static Drivetrain drivetrain = new Drivetrain();
+  public static Lift lift = new Lift();
   public static OI oi;
 
   @Override
@@ -39,8 +41,7 @@ public class Robot extends IterativeRobot {
 
   @Override
   public void autonomousInit() {
-    //code to run auto
-    //We likely will not be using this section. I belive this is for automated phase, not for automated commands triggered by buttons.
+   
   }
 
   @Override
