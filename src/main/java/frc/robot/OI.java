@@ -49,14 +49,14 @@ public double getHatState(){
     return this.fStick.getPOV();
 }
 
-public double interpretHatState(int forward, int back){
+public double interpretHatState(int forward, int back, double speed0, double speed1){
     double speed = 0.0;
   
     if (getHatState() == forward)
-         speed = 0.1;
+         speed = speed0;
     else if (getHatState() == back)
         
-         speed = -0.1;
+         speed = speed1;
     return speed;
 }
 public double getMultiplier(double axis, double throttle){

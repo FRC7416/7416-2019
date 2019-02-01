@@ -18,9 +18,9 @@ public class LiftOperation extends Command {
     //I belive this is where all button-press commands should go.
   
    // can change to buttons once we figuer out the numbers
-    Robot.lift.driveTurntable(Robot.oi.interpretHatState(90,270));
+    Robot.lift.driveTurntable(Robot.oi.interpretHatState(90,270,0.2,-0.2));
 
-    Robot.lift.driveLift(Robot.oi.interpretHatState(0,180));
+    Robot.lift.driveLift(Robot.oi.interpretHatState(0,180,0.2,-0.2));
 
   }
 
