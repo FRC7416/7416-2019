@@ -16,8 +16,8 @@ public class LiftOperation extends Command {
   @Override
   protected void execute() {
     //I belive this is where all button-press commands should go.
-   
-
+  
+   // can change to buttons once we figuer out the numbers
     Robot.lift.driveTurntable(Robot.oi.interpretHatState(90,270));
 
     Robot.lift.driveLift(Robot.oi.interpretHatState(0,180));
