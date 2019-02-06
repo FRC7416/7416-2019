@@ -13,9 +13,7 @@ public class Drivetrain extends Subsystem {
 private VictorSP leftMain = new VictorSP(RobotMap.LEFT_MAIN_MOTOR);
 private VictorSP rightMain = new VictorSP(RobotMap.RIGHT_MAIN_MOTOR);
 
- 
-private Encoder liftEnc = new Encoder(0, 1, true);
-public Drivetrain (){
+ public Drivetrain (){
   leftMain.setInverted(false);
   
   rightMain.setInverted(true);
